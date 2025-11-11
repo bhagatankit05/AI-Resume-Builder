@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const logos = [
-        'https://saasly.prebuiltui.com/assets/companies-logo/instagram.svg',
-        'https://saasly.prebuiltui.com/assets/companies-logo/framer.svg',
-        'https://saasly.prebuiltui.com/assets/companies-logo/microsoft.svg',
-        'https://saasly.prebuiltui.com/assets/companies-logo/huawei.svg',
-        'https://saasly.prebuiltui.com/assets/companies-logo/walmart.svg',
-    ];
-
     return (
         <>
             <div className="min-h-screen pb-20 bg-[#0f0f11] text-white">
@@ -139,21 +131,21 @@ const Hero = () => {
 
                     {/* Headline + CTA */}
                     <h1 className="text-5xl md:text-6xl font-semibold max-w-5xl text-center mt-4 md:leading-[70px] text-white">
-                        Build stunning websites with{' '}
+                       Build a Job-Winning{' '}
                         <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent text-nowrap">
-                            PrebuiltUI
+                            Resume
                         </span>{' '}
-                        Components.
+                        Instantly with the Power of AI.
                     </h1>
 
                     <p className="max-w-md text-center text-base my-7 text-gray-400">
-                        Explore a growing library of over 320+ beautifully crafted, customizable components.
+                       Generate stunning, job-ready resumes effortlessly with intelligent AI assistance.
                     </p>
 
                     {/* CTA Buttons */}
                     <div className="flex items-center gap-4">
-                        <a
-                            href="/"
+                        <Link
+                            to="/app"
                             className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-500 flex items-center transition-colors"
                         >
                             Get started
@@ -173,7 +165,7 @@ const Hero = () => {
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg>
-                        </a>
+                        </Link>
                         <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 transition rounded-full px-7 h-12 text-gray-300 hover:text-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -195,13 +187,7 @@ const Hero = () => {
                         </button>
                     </div>
 
-                    <p className="py-6 text-gray-400 mt-14">Trusted by leading brands, including</p>
-
-                    <div className="flex flex-wrap justify-between max-sm:justify-center gap-6 max-w-3xl w-full mx-auto py-4">
-                        {logos.map((logo, index) => (
-                            <img key={index} src={logo} alt="logo" className="h-6 w-auto max-w-xs brightness-0 invert opacity-80" />
-                        ))}
-                    </div>
+                   
                 </div>
             </div>
 
